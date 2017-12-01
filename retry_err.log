@@ -1,0 +1,3 @@
+>>>>重试三次都失败，打error
+
+[2017-11-08 19:28:50.996273] - 15101405191049  AsyTask.php maxtrytimes (msg=(config=(tryTimes=3&attempts=3&delay=10&tryMaps=(1=5&2=6&3=10)&bootPath=/home/users/v_zhangshuxin01/defensor/thrones/scripts/..//scripts/auth/task.php)&callback=a:2:{i:0;O:14:"Logic_CustShow":0:{}i:1;s:13:"showDataAsync";}&param_arr=(0=1&1=v_zhangshuxin01&2=19999999&3=91110116MA00GAB87D&4=(idType=1&vType=10&company=北京迪日石油化工有限公司&describe=北京迪日石油化工有限公司)&5=)&taskflag=15101405191049)&result=%0Abeginning.....a:2:{s:6:"status";i:3;s:6:"errmsg";s:24:"获取官方数据为空";}.....ending) logid=1510140309478_42969665 rpclogid=151014030947878880

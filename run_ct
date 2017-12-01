@@ -1,0 +1,20 @@
+#!/bin/sh
+
+if [ $# -lt 2 ]; then
+    echo "Usage: run_ct online|offline|run|stop CT_ID"
+    exit 0
+fi
+
+case "$1" in 
+    "online" )
+        curl "http://api.noah.baidu.com/ctweb/api/taskPostXml/RV0d8ToCqE4mQBzkI4Pep8cty9Dl3Ka5/status/?taskid="${2}"&status=tconfirm" | grep "<msg>.*<\/msg>" ;;
+    "offline" )
+        curl "http://api.noah.baidu.com/ctweb/api/taskPostXml/RV0d8ToCqE4mQBzkI4Pep8cty9Dl3Ka5/status/?taskid="${2}"&status=shelve" | grep "<msg>.*<\/msg>" ;;
+    "run" )
+        curl "http://api.noah.baidu.com/ctweb/api/taskPostXml/RV0d8ToCqE4mQBzkI4Pep8cty9Dl3Ka5/runTaskInstance/?taskid="${2}"&immediately=1" | grep "<msg>.*<\/msg>" ;;
+    "stop" )
+        curl "http://api.noah.baidu.com/ctweb/api/taskPostXml/RV0d8ToCqE4mQBzkI4Pep8cty9Dl3Ka5/stopNowInstance/?taskid="${2} | grep "<msg>.*<\/msg>" ;;
+    * )
+        echo "Usage: run_ct online|offline|run|stop CT_ID"
+esac
+exit 0
